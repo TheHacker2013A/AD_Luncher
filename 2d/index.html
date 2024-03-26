@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D games</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #111;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        nav h1{
+            color: #fff;
+            margin-left: 2rem;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 2rem;
+        }
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav ul li :hover{
+            border-bottom: solid #fff 1px; 
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .game1 {
+            position: relative;
+            display: inline-block;
+            border: 2px solid #fff; /* Added border */
+            padding: 10px; /* Added padding */
+            margin-bottom: 20px; /* Added margin bottom */
+        }
+        .game1 img {
+            width: 200px;
+        }
+        .game1 p {
+            color: #fff; /* Added color */
+            font-size: 16px; /* Added font size */
+            margin-top: 10px; /* Added margin top */
+        }
+        .game1 input[type="button"] {
+            display: block; /* Display button as block to move below text */
+            margin: 10px auto; /* Center the button */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .game1 input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: cyan;
+        }
+        .border-title {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #111;
+            color: cyan;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Loading spinner styles */
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loading-spinner {
+            border: 8px solid #3498db; /* Blue border */
+            border-top: 8px solid #f3f3f3; /* Grey border */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="container" style="display:none;">
+        <nav>
+            <h1>AD luncher</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">2d</a></li>
+                <li><a href="#">3d</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <hr>  
+        <br>
+        <div class="game1">
+            <div class="border-title">Parkour</div> <!-- Title added on the border -->
+            <img src="Screenshot 2024-03-20 153238.png" alt="Small Image"> <!-- Replace image.jpg with your image URL -->
+            <p>2d | Windows | Godot | 645 KB</p> <!-- Added space between 3d and Windows -->
+            <a download="Parkour Game" href="parkour game.rar" style="text-decoration: none;"><input type="button" value="Download"></a>
+        </div>
+    </div>
+    <script>
+        // Simulate loading delay
+        setTimeout(function() {
+            document.querySelector('.loading-container').style.display = 'none'; // Hide the loading spinner
+            document.querySelector('.container').style.display = 'block'; // Show the content
+        }, 3000); // Adjust delay time as needed
+    </script>
+</body>
+</html>
